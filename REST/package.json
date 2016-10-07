@@ -1,0 +1,34 @@
+{
+  "name": "agile_scrum_tool",
+  "version": "1.0.0",
+  "description": "A simple tool to keep track work during software development life cycle. It is implemented using mean stack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shubh28/agile_scrum_tool.git"
+  },
+  "keywords": [
+    "nodejs",
+    "angularjs",
+    "mean",
+    "agile"
+  ],
+  "author": "Shubham Jain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shubh28/agile_scrum_tool/issues"
+  },
+  "homepage": "https://github.com/shubh28/agile_scrum_tool#readme",
+  "dependencies": {
+    "bcrypt": "^0.8.7",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "jsonwebtoken": "^7.1.9",
+    "mongoose": "^4.6.2",
+    "mongoose-auto-increment": "^5.0.1",
+    "morgan": "^1.7.0"
+  }
+}

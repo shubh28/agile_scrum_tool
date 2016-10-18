@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container1">
 	<div class="info">
 		<h1>Agile Scrum Tool</h1><span>Made with <i class="fa fa-heart"></i> by Shubham Jain & Rishabh Jain </span>
 	</div>
@@ -13,6 +13,9 @@
 		<input type="text" placeholder="Team Code" ng-model="user.teamCode" required="" />
 		<input type="checkbox" ng-model="user.admin"/><span class="message">Are you the manager?</span>
 		<button>create</button>
+		<div class="bs-example bs-example-bg-classes" ng-show="flag">
+			<p class="{{color}}">{{error}}</p>	
+		</div>
 		<p class="message">Already registered? <a ng-click="tab=2">Sign In</a></p>
 	</form>
 
@@ -20,6 +23,9 @@
 		<input type="email" placeholder="Email" ng-model="user.email" required />
 		<input type="password" placeholder="Password" ng-model="user.password" required />
 		<button>login</button>
+		<div class="bs-example bs-example-bg-classes" ng-show="flag">
+			<p class="{{color}}">{{error}}</p>	
+		</div>
 		<p class="message">Not registered? <a ng-click="tab=1">Create an account</a></p>
 	</form>
 </div>

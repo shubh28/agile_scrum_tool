@@ -7,7 +7,7 @@ module.exports = function(app,router){
 	app.use(bodyParser.json());
 
 	app.get('/',function(req,res){
-		res.json({message:"Finally it all has started"});
+		res.json({devMessage:"Finally it all has started"});
 	});
 
 	app.post('/login',function(req,res){
@@ -34,7 +34,7 @@ module.exports = function(app,router){
 					});
 				}
 				else{
-					res.status(401).json({success:false,message: 'Authentication failed.Wrong Password'});
+					res.status(401).json({success:false,devMessage: 'Authentication failed.Wrong Password'});
 				}
 			}
 		});

@@ -57,7 +57,7 @@ module.exports = function(app,router){
 					});
 					user.save(function(err){
 						if(err) res.json(err);
-						else res.status(200).json({message:'User successfully created'});
+						else res.status(200).json({devMessage:'User successfully created.Login to continue'});
 					});
 				}
 			});
@@ -80,12 +80,12 @@ module.exports = function(app,router){
 						});
 						user.save(function(err){
 							if(err) res.json(err);
-							else res.status(200).json({message:'User successfully created'});
+							else res.status(200).json({devMessage:'User successfully created . Login to continue'});
 						});
 					}
 					//console.log(person);
 					else{
-						res.status(401).json({message:'Wrong Team Code'});
+						res.status(401).json({devMessage:'Wrong Team Code'});
 					}
 				}
 				else if(!person.length){

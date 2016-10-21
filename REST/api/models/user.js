@@ -8,10 +8,7 @@ autoIncrement.initialize(connection);
 var userSchema = new Schema({
 	name: {type:String,required:true},
 	email: {type:String,required:true},
-	password: {type:String, required: true},
-	admin: {type:Boolean, required: true},
-	teamName: {type:String,required:true},
-	teamCode: {type:String,required:true}
+	password: {type:String, required: true}
 });
 userSchema.plugin(autoIncrement.plugin,{
 	model : 'User',

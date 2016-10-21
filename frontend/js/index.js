@@ -13,13 +13,6 @@ ast.config(function($routeProvider){
 		})
 		.otherwise({ redirectTo: '/' });
 });
-// ast.config([
-//     "$routeProvider",
-//     "$httpProvider",
-//     function($routeProvider, $httpProvider){
-//         $httpProvider.defaults.headers.common['Access-Control-Allow-Headers'] = '*';
-//     }
-// ]);
 
 ast.controller('loginController', ['$scope','$http','$location','$window', function($scope,$http,$location,$window){
 	$scope.tab = 2;

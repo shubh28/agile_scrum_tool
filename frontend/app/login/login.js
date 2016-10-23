@@ -40,7 +40,7 @@ angular.module('ast.login', ['ngRoute'])
 			
 			$window.sessionStorage.ast_user = JSON.stringify($scope.currentUser);
 			
-			$http.defaults.headers.Authorization = $scope.currentUser.token;
+			$http.defaults.headers.common.Authorization = $scope.currentUser.token;
 			
 			$location.path('/start');
 

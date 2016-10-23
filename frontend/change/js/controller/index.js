@@ -41,62 +41,45 @@ ast.controller('loginController', ['$scope','$http','$location','$window', funct
 			data: $scope.user,
 			//headers : {'Content-Type': 'application/json'}
 		}).success(function(res){
-			//console.log(res);
-			$scope.color="bg-success";
-			$scope.flag = 1;
-			$scope.error = res.devMessage;
-			$scope.user = {};
+			$scope.color="bg-success"; $scope.flag = 1; $scope.error = res.devMessage; $scope.user = {};
 			$scope.currentUser = res;
+			
 			$window.sessionStorage.ast_user = JSON.stringify($scope.currentUser);
-			$http.defaults.headers['x-access-token'] = $scope.currentUser.token;
+			//console.log($window.sessionStorage.ast_user);
+			$http.defaults.headers.Authorization = $scope.currentUser.token;
+			//console.log($http.defaults.headers.Authorization);
 			$location.path('/user');
+
 		}).error(function(res){
-			//console.log(res.devMessage);
-			$scope.color="bg-danger";
-			$scope.flag = 1;
-			$scope.error = "Error:"+res.devMessage;
-			$scope.user = {};
+			$scope.color="bg-danger";$scope.flag = 1;$scope.error = "Error:"+res.devMessage;$scope.user = {};
 		});
 	};
 }]);
 
 ast.controller('userController', ['$scope','$http','$location','$window', function ($scope,$http,$location,$window){
 	$scope.ast_user = {};
-	if(typeof $window.sessionStorage.ast_user === "undefined"){
-		$location.path('/');
-	}
 	$scope.ast_user = JSON.parse($window.sessionStorage.ast_user);
-	console.log($scope.ast_user.token);
-	if($scope.ast_user.token !== 'undefined'){
-		console.log($window.sessionStorage.ast_user.length);
-		$scope.panel = 1;
-		$scope.ast_user = JSON.parse($window.sessionStorage.ast_user);
-		//console.log($scope.ast_user);
-		//$http.defaults.headers['x-access-token'] = $scope.ast_user.token;
-		//console.log($http.defaults.headers['x-access-token']);
-		var team = $scope.ast_user.teamName;
-		var getUsers = function(team){
-			//console.log(team);
-			$http({
-				method: 'GET',
-				url : url+'/api/user/'+team,
-				params:{token:$scope.ast_user.token}
-			}).success(function(res){
-				$scope.users = res;
-			}).error(function(err){
-				console.log(err);
-			});
-		};
-		$scope.logout = function(){
-			$location.path('/');
-			$window.sessionStorage.ast_user = {};
-			console.log($window.sessionStorage.ast_user.token);
-			$scope.ast_user = {};
-		};
-		getUsers(team);
-	}else{
-		console.log($window.sessionStorage.ast_user);
+
+	$scope.panel = 1;
+	$scope.ast_user = JSON.parse($window.sessionStorage.ast_user);
+	
+	$http.defaults.headers.common.Authorization = $scope.ast_user.token;
+	var team = $scope.ast_user.teamName;
+	var getUsers = function(team){
+		$http({
+			method: 'GET',
+			url : url+'/api/user/'
+		}).success(function(res){
+			$scope.users = res;
+		}).error(function(err){
+			console.log(err);
+		});
+	};
+	$scope.logout = function(){
 		$location.path('/');
-	}
+		$window.sessionStorage.ast_user = {};
+		$scope.ast_user = {};
+	};
+	getUsers(team);
 
 }]);

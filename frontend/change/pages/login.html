@@ -1,0 +1,28 @@
+<div class="container1">
+	<div class="info">
+		<h1>Agile Scrum Tool</h1><span>Made with <i class="fa fa-heart"></i> by Shubham Jain & Rishabh Jain </span>
+	</div>
+</div>
+<div class="form">
+	<div class="thumbnail"><img src="images/logo.png" class="img-responsive"/></div>
+	<form class="register-form" ng-submit="register()" ng-show="tab == 1">
+		<input type="text" placeholder="Full Name" ng-model="user.name" required="" />
+		<input type="email" placeholder="Email Address" ng-model="user.email" required="" />
+		<input type="password" placeholder="Password" ng-model="user.password" required="" />
+		<button>create</button>
+		<div class="bs-example bs-example-bg-classes" ng-show="flag">
+			<p class="{{color}}">{{error}}</p>	
+		</div>
+		<p class="message">Already registered? <a ng-click="tab=2">Sign In</a></p>
+	</form>
+
+	<form class="login-form" ng-submit="login()" id="login"  ng-show="tab == 2">
+		<input type="email" placeholder="Email" ng-model="user.email" required />
+		<input type="password" placeholder="Password" ng-model="user.password" required />
+		<button>login</button>
+		<div class="bs-example bs-example-bg-classes" ng-show="flag">
+			<p class="{{color}}">{{error}}</p>	
+		</div>
+		<p class="message">Not registered? <a ng-click="tab=1">Create an account</a></p>
+	</form>
+</div>

@@ -4,7 +4,7 @@ var autoIncrement = require('mongoose-auto-increment');
 var config = require('../../config/config');
 var connection = mongoose.connect(config.database);
 autoIncrement.initialize(connection);
-
+module.exports = connection;
 var userSchema = new Schema({
 	name: {type:String,required:true},
 	email: {type:String,required:true},

@@ -1,5 +1,5 @@
 var bodyParser = require('body-parser');
-var User = require('../models/user');
+var User = require('../../models/user');
 var jwt = require('jsonwebtoken');
 var bcrypt = require('bcrypt');
 module.exports = function(app,router){
@@ -30,7 +30,7 @@ module.exports = function(app,router){
 						success : true,
 						devMessage : 'Enjoy the token',
 						token : token,
-						teamName : user.teamName
+						email : user.email
 					});
 				}
 				else{

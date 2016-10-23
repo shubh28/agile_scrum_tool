@@ -27,17 +27,9 @@ ast.controller('loginController', ['$scope','$http','$location','$window', funct
 			data: $scope.user,
 			headers : {'Content-Type': 'application/json'}
 		}).success(function(res){
-			//console.log(res);
-			$scope.color="bg-success";
-			$scope.flag = 1;
-			$scope.error = res.devMessage;
-			$scope.user = {};
+			$scope.color="bg-success"; $scope.flag = 1; $scope.error = res.devMessage; $scope.user = {};
 		}).error(function(res){
-			//console.log(res);
-			$scope.color="bg-danger";
-			$scope.flag = 1;
-			$scope.error = res.devMessage;
-			$scope.user = {};
+			$scope.color="bg-danger"; $scope.flag = 1; $scope.error = res.devMessage; $scope.user = {};
 		});
 	};
 

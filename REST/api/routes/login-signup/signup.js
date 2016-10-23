@@ -1,5 +1,5 @@
 var bodyParser = require('body-parser');
-var User = require('../models/user');
+var User = require('../../models/user');
 var bcrypt = require('bcrypt');
 
 module.exports = function(app,router){

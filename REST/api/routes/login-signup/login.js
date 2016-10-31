@@ -30,7 +30,8 @@ module.exports = function(app,router){
 						success : true,
 						devMessage : 'Enjoy the token',
 						token : token,
-						email : user.email
+						email : user.email,
+						name: user.name
 					});
 				}
 				else{

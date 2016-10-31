@@ -1,0 +1,17 @@
+<header></header>
+<sidebar></sidebar>
+<section id="main-content">
+	<section class="wrapper site-min-height">
+        <div class='col-md-6 col-md-offset-3 text-center'>
+            <h1>Team Details</h1>
+            <div class="form">
+                <input type="text" placeholder="Team Name" ng-model="team.name" required="" />
+                <input type="text" placeholder="Team Code" ng-model="team.team_code" required="" />
+                <button ng-click="createTeam()">Add To Team</button>
+                <div class="bs-example bs-example-bg-classes" ng-show="flag">
+                    <p class="{{color}}">{{error}}</p>
+                </div>
+            </div>
+        </div>
+	</section>
+</section>

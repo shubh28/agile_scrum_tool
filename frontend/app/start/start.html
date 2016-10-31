@@ -1,26 +1,44 @@
-<div class="container text-center">
-		<h1 >Users</h1>		
-	<div class="row">
-		<div class="col-md-6 col-md-offset-3">
-			<div class="panel-group" id="accordion">
-			  <div class="panel panel-default" ng-repeat="user in users">
-			    <div class="panel-heading">
-			      <h4 class="panel-title">
-			        <a role="button" data-toggle="collapse" data-parent="#accordion" data-target="#user-{{user._id}}">
-			          {{user.name}}
-			        </a>
-			      </h4>
-			    </div>
-			    <div id="user-{{user._id}}" class="panel-collapse collapse ">
-			      <div class="panel-body">
-			        <strong>Name</strong> : {{user.name}}<br>
-			        <strong>Email</strong> : {{user.email}}
-			      </div>
-			    </div>
-			  </div>
-			</div>			
-		</div>
-	</div>
-	<!-- <a href="#/" class="btn btn-warning">Logout</a> -->
-	<button ng-click="logout()" class="btn btn-warning" style="cursor:pointer">Logout</button>
-</div>
+<header></header>
+<sidebar></sidebar>
+<section id="main-content">
+	<section class="wrapper site-min-height">
+				<!--<h1 >Users</h1>		
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<div class="panel-group" id="accordion">
+							<div class="panel panel-default" ng-repeat="user in users">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion" data-target="#user-{{user._id}}">
+											{{user.name}}
+										</a>
+									</h4>
+								</div>
+								<div id="user-{{user._id}}" class="panel-collapse collapse ">
+									<div class="panel-body">
+										<strong>Name</strong> : {{user.name}}<br>
+										<strong>Email</strong> : {{user.email}}
+									</div>
+								</div>
+							</div>
+						</div>			
+					</div>
+				</div>
+				<button ng-click="logout()" class="btn btn-warning" style="cursor:pointer">Logout</button>-->
+				<div class=" text-center">
+					<div class="col-md-6">
+						<h2>Get started as manager</h2>
+						<p>If you are manager start by clicking below and create a team.</p>
+						<div class="form"><a href="/app/#/create" class="add">Get Started as Manager</a></div>
+					</div>
+					<div class="col-md-6">
+						<h2>Get Stated as a member</h2>
+						<p>If you are memeber click below and enter details about the team to join.</p>
+						<div class="form"><a href="/app/#/add" class="add">Get Started as Member</a></div>
+					</div>
+				</div>
+	</section>
+</section>
+<!--<div class="container text-center">
+	
+</div>-->

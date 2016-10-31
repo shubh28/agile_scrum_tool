@@ -1,5 +1,7 @@
 /* app css stylesheet */
-
+.wrapper{
+  margin-top: 8%;
+}
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
@@ -68,7 +70,7 @@
   box-sizing: border-box;
   font-size: 14px;
 }
-.form button {
+.form button, .form .add {
   outline: 0;
   background: #F39A1E;
   width: 100%;

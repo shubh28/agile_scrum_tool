@@ -4,10 +4,12 @@
 angular.module('ast', [
   'ngRoute',
   'ast.login',
-  'ast.start'
+  'ast.start',
+  'ast.add',
+  'ast.create'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
+  //$locationProvider.hashPrefix('!');
 
   $routeProvider.otherwise({redirectTo: '/login'});
 }]);

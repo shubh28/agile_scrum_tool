@@ -6,7 +6,9 @@ angular.module('ast', [
   'ast.login',
   'ast.start',
   'ast.add',
-  'ast.create'
+  'ast.create',
+  'ast.teams',
+  'ast.tasks'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   //$locationProvider.hashPrefix('!');

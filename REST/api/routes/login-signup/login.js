@@ -30,6 +30,7 @@ module.exports = function(app,router){
 						success : true,
 						devMessage : 'Enjoy the token',
 						token : token,
+						id : user._id,
 						email : user.email,
 						name: user.name
 					});

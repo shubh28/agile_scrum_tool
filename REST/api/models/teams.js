@@ -1,9 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var autoIncrement = require('mongoose-auto-increment');
-var config = require('../../config/config');
 var connection  = require('./user');
-//var connection = mongoose.connect(config.database);
 autoIncrement.initialize(connection);
 
 var teamSchema = new Schema({

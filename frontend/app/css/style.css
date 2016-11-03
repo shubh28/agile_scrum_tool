@@ -985,12 +985,12 @@ PANELS CONFIGURATIONS
 /*Panel Size*/
 
 .pn {
-	height: 250px;
-	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+	height: auto;
+	box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .pn:hover {
-	box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.3);
+	box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.3);
 	
 }
 
@@ -1079,24 +1079,27 @@ PANELS CONFIGURATIONS
 .white-panel {
 	text-align: center;
 	background: #ffffff;
-	color: #ccd1d9;
+	color: #a4abbb;
 }
-
-.white-panel p {
+.white-panel form{
+    padding: 10px;
+}
+.white-panel p,.white-panel h5 {
 	margin-top: 5px;
 	font-weight: 700;
 	margin-left: 15px;
 }
 .white-panel .white-header {
-	background: #f4f4f4;
+	background: #000;
 	padding: 3px;
 	margin-bottom: 15px;
 	color: #c6c6c6;
 }
 .white-panel .small {
-	font-size: 10px;
-	color: #ccd1d9;
+	font-size: 15px;
+	color: darkslategrey;
 }
+
 
 .white-panel i {
 	color: #68dff0;
@@ -1245,7 +1248,8 @@ PANELS CONFIGURATIONS
 .weather-3 .info p {
 	margin-left: 10px;
 	margin-right: 10px;
-	margin-bottom: 16px;
+	margin-bottom: 12px;
+    margin-top: 9px;
 	color: #c2c2c2;
 	font-size: 15px;
 	font-weight: 700;
@@ -2236,8 +2240,8 @@ label {
     color: #2A3542;
 }
 
-.site-min-height {
-    min-height: 900px;
-}
+/*.site-min-height {*/
+    /*min-height: 500px;*/
+/*}*/
 
 

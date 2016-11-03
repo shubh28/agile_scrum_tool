@@ -18,9 +18,9 @@ module.exports = function(app,router){
             else{
                 Sprint.find({teamId:req.params.teamId},function(err,sprints){
                     if(err) throw err;
-                    else if(!sprints.length) res.status(400).json({devMessage:"No Sprints"});
+                    else if(!sprints.length) res.status(200).json({devMessage:"No Sprints"});
                     else{
-                        res.status(400).json(sprints);
+                        res.status(200).json(sprints);
                     }
                 });
             }

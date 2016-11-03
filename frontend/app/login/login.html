@@ -9,7 +9,7 @@
 		<input type="text" placeholder="Full Name" ng-model="user.name" required="" />
 		<input type="email" placeholder="Email Address" ng-model="user.email" required="" />
 		<input type="password" placeholder="Password" ng-model="user.password" required="" />
-		<button>create</button>
+		<button>Sign Up</button>
 		<div class="bs-example bs-example-bg-classes" ng-show="flag">
 			<p class="{{color}}">{{error}}</p>	
 		</div>
@@ -19,7 +19,7 @@
 	<form class="login-form" ng-submit="login()" id="login"  ng-show="tab == 2">
 		<input type="email" placeholder="Email" ng-model="user.email" required />
 		<input type="password" placeholder="Password" ng-model="user.password" required />
-		<button>login</button>
+		<button>Login</button>
 		<div class="bs-example bs-example-bg-classes" ng-show="flag">
 			<p class="{{color}}">{{error}}</p>	
 		</div>

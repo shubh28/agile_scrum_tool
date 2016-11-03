@@ -3,9 +3,9 @@ var User = require('../../models/user');
 
 module.exports = function(app,router){
     router.get('/comments/:taskId',function(req,res){
-        Task.find({_id:req.params.taskId},{comments:1,_id:0},function(err,comments){
+        Task.findOne({_id:req.params.taskId},{comments:1,_id:0},function(err,comments){
             if(err) throw err;
-            else if(!comments.length) res.status(400).json({devMessage:"No such tasks"});
+            else if(!comments) res.status(400).json({devMessage:"No such tasks"});
             else{
                 res.status(200).json(comments);
             }

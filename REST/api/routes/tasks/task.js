@@ -13,23 +13,32 @@ module.exports = function(app,router){
                     if(err) throw err;
                     else if(!tasks.length) res.status(400).json({devMessage:"No tasks"});
                     else{
-                        res.status(400).json(tasks);
+                        res.status(200).json(tasks);
                     }
                 });
             }
         });
     });
 
-    router.get('/task/:sprintId',function(req,res){
+    router.get('/task/:taskId',function(req,res){
+        Task.findOne({_id:req.params.taskId},function(err,task){
+            if(err) throw err;
+            else{
+                        res.status(200).json(task);
+            }
+        });
+    });
+
+    router.get('/task/sprint/:sprintId',function(req,res){
         Sprint.find({_id:req.params.sprintId},function(err,sprint){
             if(err) throw err;
             else if(!sprint.length) res.status(400).json({devMessage:"No such sprints"});
             else{
                 Task.find({sprintId:req.params.sprintId},function(err,tasks){
                     if(err) throw err;
-                    else if(!tasks.length) res.status(400).json({devMessage:"No tasks"});
+                    else if(!tasks.length) res.status(200).json({devMessage:"No tasks"});
                     else{
-                        res.status(400).json(tasks);
+                        res.status(200).json(tasks);
                     }
                 });
             }
@@ -57,4 +66,13 @@ module.exports = function(app,router){
             }
         });
     });
+    router.put('/task/changestatus/:taskId',function(req,res){
+        var query = {_id:req.params.taskId};
+        var data = {status : req.body.status};
+        var options = {safe: true, upsert: true, new : true};
+        Task.findOneAndUpdate(query,data,options,function(err){
+            if(err) throw err;
+            else res.status(200).json({devMessage:"status successfully updated"})
+        });
+    })
 };

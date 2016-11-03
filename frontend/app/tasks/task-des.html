@@ -1,0 +1,44 @@
+<header></header>
+<sidebar></sidebar>
+<section id="main-content">
+    <section class="wrapper site-min-height">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 mb">
+                <div class="weather-3 pn centered">
+                    <i class="fa fa-tasks"></i>
+                    <h1>{{task.name}}</h1>
+
+                    <div class="info">
+                        <div class="row">
+                            <h3 class="centered">{{task.description}}</h3>
+                            <div class="col-sm-5 col-xs-6 pull-left">
+                                <p class="goleft"><i class="fa fa-tint"></i> {{task.status}}</p>
+                            </div>
+                            <div class="col-sm-2 col-xs-2"><p>{{task.assignedTo}}</p></div>
+                            <div class="col-sm-5 col-xs-6 pull-right">
+                                <p class="goright"><i class="fa fa-clock-o"></i> {{task.time}} Hour</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 mb">
+                <!-- WHITE PANEL - TOP USER -->
+                <div class="white-panel pn">
+                    <div class="white-header">
+                        <h4>COMMENTS</h4>
+                    </div>
+                    <form>
+                        <textarea placeholder="Write Comment" class="form-control" ng-model="comment"></textarea><br>
+                        <button class="btn btn-warning pull-left"  ng-click="postComment()">Add Comment</button>
+                        <div class="clearfix"></div>
+                    </form>
+                    <div class="text-left" ng-repeat ="comment in comments" style="margin-bottom:10px;">
+                        <h5 class="text-left small" style="display: inline;"><b>{{comment.user_id}}</b></h5><p style="display: inline">{{comment.text}}</p>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

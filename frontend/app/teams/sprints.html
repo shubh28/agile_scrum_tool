@@ -1,0 +1,34 @@
+<header></header>
+<sidebar></sidebar>
+<section id="main-content">
+    <section class="wrapper site-min-height">
+        <div class="row">
+            <div class="col-md-12 mt">
+                <div class="content-panel">
+                    <table class="table table-hover ">
+                        <h4><i class="fa fa-angle-right"></i>Sprints</h4>
+                        <hr>
+                        <thead>
+                        <tr>
+                            <th class="text-center">Sprint ID</th>
+                            <th class="text-center">Sprint Name</th>
+                            <th class="text-center">Team Id</th>
+                            <th class="text-center"></th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="sprint in sprints" class="text-center">
+                            <td>{{sprint._id}}</td>
+                            <td>{{sprint.name}}</td>
+                            <td>{{sprint.teamId}}</td>
+                            <td><a href="/app/#/viewtasks/{{sprint._id}}" class="my-btn">See Tasks</a><a href="/app/#/addtasks/{{sprint._id}}" class="my-btn">Add Tasks</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div><! --/content-panel -->
+            </div><!-- /col-md-12 -->
+
+        </div>
+    </section>
+</section>

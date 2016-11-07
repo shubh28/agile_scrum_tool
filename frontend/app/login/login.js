@@ -13,7 +13,7 @@ angular.module('ast.login', ['ngRoute'])
 	$scope.tab = 2;
 	$scope.flag = 0;
 	$scope.user = {};
-
+	console.log($scope);
 	$scope.register = function(){
 		//console.log($scope.user);
 		$http({

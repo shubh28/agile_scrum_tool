@@ -188,6 +188,9 @@ body {
   margin-right: 15px;
   background: #68dff0;
 }
+b{
+  font-weight: bolder;
+}
 /*.jumbotron{
   background: #F39A1E;
 }*/

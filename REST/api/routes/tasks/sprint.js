@@ -26,6 +26,13 @@ module.exports = function(app,router){
             }
         });
     });
+    router.get('/sprintOne/:sprintId',function(req,res){
+        Sprint.findOne({_id:req.params.sprintId},function(err,sprint){
+            if (err) throw err;
+            else if(!sprint) res.status(400).json({devMessage:"No Sprints with this id"});
+            else res.status(200).json(sprint);
+        })
+    })
     router.post('/sprint/:teamId',function(req,res){
         Team.findOne({_id:req.params.teamId},function(err,team){
             if(err) throw err;

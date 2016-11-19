@@ -49,27 +49,29 @@ jQuery(document).ready(function($){
             $(window).on('resize', responsiveView);
         });
 
-        $('.fa-bars').click(function () {
+        $(window).ready(function(){
+            $('.fa-bars').click(function () {
             
-            if ($('#sidebar > ul').is(":visible") === true) {
-                $('#main-content').animate({
-                    'margin-left': '0px'
-                },200);
-                $('#sidebar').animate({
-                    'margin-left': '-210px'
-                },200);
-                $('#sidebar > ul').hide();
-                $("#container").addClass("sidebar-closed");
-            } else {
-                $('#main-content').animate({
-                    'margin-left': '210px'
-                },200);
-                $('#sidebar > ul').show();
-                $('#sidebar').animate({
-                    'margin-left': '0'
-                },200);
-                $("#container").removeClass("sidebar-closed");
-            }
+                if ($('#sidebar > ul').is(":visible") === true) {
+                    $('#main-content').animate({
+                        'margin-left': '0px'
+                    },200);
+                    $('#sidebar').animate({
+                        'margin-left': '-210px'
+                    },200);
+                    $('#sidebar > ul').hide();
+                    $("#container").addClass("sidebar-closed");
+                } else {
+                    $('#main-content').animate({
+                        'margin-left': '210px'
+                    },200);
+                    $('#sidebar > ul').show();
+                    $('#sidebar').animate({
+                        'margin-left': '0'
+                    },200);
+                    $("#container").removeClass("sidebar-closed");
+                }
+            });
         });
 
     // custom scrollbar

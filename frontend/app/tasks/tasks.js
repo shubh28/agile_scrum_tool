@@ -91,8 +91,26 @@ angular.module('ast.tasks', ['ngRoute'])
             method: 'GET',
             url : url+'/api/task/user/'+id
         }).success(function(res){
-
             $scope.tasks = res;
+            //console.log($scope.tasks);
+            res.forEach(function(key){
+                //console.log(key.sprintId);
+                $http({
+                    method : 'GET',
+                    url : url+'/api/sprintOne/'+key.sprintId
+                }).success(function(data){
+                    //console.log(data);
+                    key.sprintName = data.name;
+                    $http({
+                        method : 'GET',
+                        url : url+'/api/teamOne/'+data.teamId
+                    }).success(function(team){
+                        key.teamName = team.name;
+                        //console.log();
+                    })
+
+                })
+            })
         }).error(function(res){
             console.log(res);
         });
@@ -107,8 +125,19 @@ angular.module('ast.tasks', ['ngRoute'])
         $http({
             method: 'GET',
             url : url+'/api/task/'+$routeParams.id
-        }).success(function(res){
-            $scope.task = res;
+        }).success(function(data){
+            //$scope.task = res;
+
+            //console.log(data);
+            $http({
+                method : 'GET',
+                url : url + '/api/user/'+data.assignedTo
+            }).success(function(res){
+                //console.log(res);
+                data.user_name = res.name;
+                //console.log(data);
+                $scope.task = data;
+            })
         }).error(function(res){
             console.log(res);
         });
@@ -132,7 +161,16 @@ angular.module('ast.tasks', ['ngRoute'])
             url : url+'/api/comments/'+$routeParams.id
         }).success(function(res){
             $scope.comments = res.comments;
-
+            res.comments.forEach(function(key){
+                $http({
+                    method:'GET',
+                    url : url + '/api/user/'+key.user_id
+                }).success(function(res){
+                    key.user_name = res.name;
+                }).error(function(err){
+                    console.log(err);
+                });
+            });
         }).error(function(res){
             console.log(res);
         });

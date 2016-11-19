@@ -11,6 +11,17 @@ module.exports = function(app,router){
             }
         });
     });
+    router.get('/teamOne/:teamId',function(req,res){
+        Team.findOne({_id :req.params.teamId},function(err,team){
+            if(err) throw err;
+            if(!team){
+                res.status(404).json({devmessage:"No Such Team"});
+            }
+            else{
+                res.status(200).json(team);
+            }
+        });
+    });
     router.get('/members/:teamId',function(req,res){
         Team.findOne({_id:req.params.teamId},function(err,teams){
             if(!teams){

@@ -23,7 +23,7 @@
                             <td><a href="/app/#/fulltask/{{task._id}}">{{task.name}}</a></td>
                             <td class="hidden-phone">{{task.description}}</td>
                             <td>{{task.time}} Hour</td>
-                            <td>{{task.assignedTo}}</td>
+                            <td>{{task.userName}}</td>
                             <td><span class="label label-info label-mini">{{task.status}}</span></td>
                             <td>
                                 <a href="/app/#/changestatus/{{task._id}}" class="btn btn-primary btn-xs" ng-show="{{task.assignedTo === ast_user.id}} "><i class="fa fa-pencil"></i></a>

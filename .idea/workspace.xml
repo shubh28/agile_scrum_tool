@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c12c1498-a722-4299-bd22-2195a853221e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/REST/api/routes/tasks/sprint.js" afterPath="$PROJECT_DIR$/REST/api/routes/tasks/sprint.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/REST/api/routes/teams/teams.js" afterPath="$PROJECT_DIR$/REST/api/routes/teams/teams.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/css/app.css" afterPath="$PROJECT_DIR$/frontend/app/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/js/common-scripts.js" afterPath="$PROJECT_DIR$/frontend/app/js/common-scripts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/tasks/task-des.html" afterPath="$PROJECT_DIR$/frontend/app/tasks/task-des.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/tasks/tasks.html" afterPath="$PROJECT_DIR$/frontend/app/tasks/tasks.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/tasks/tasks.js" afterPath="$PROJECT_DIR$/frontend/app/tasks/tasks.js" />
-    </list>
+    <list default="true" id="c12c1498-a722-4299-bd22-2195a853221e" name="Default" comment="" />
     <ignored path="agile_scrum_tool.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -360,12 +351,12 @@
       <workItem from="1478106642972" duration="14721000" />
       <workItem from="1478144908114" duration="4533000" />
       <workItem from="1478973622346" duration="70000" />
-      <workItem from="1479561340822" duration="3382000" />
+      <workItem from="1479561340822" duration="3600000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55741000" />
+    <option name="totallyTimeSpent" value="55959000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />

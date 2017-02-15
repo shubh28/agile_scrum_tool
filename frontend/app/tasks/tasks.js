@@ -55,6 +55,15 @@ angular.module('ast.tasks', ['ngRoute'])
             url : url+'/api/task/sprint/'+$routeParams.sprintId
         }).success(function(res){
             $scope.viewtasks = res;
+            res.forEach(function(key){
+                
+                $http({
+                    method : 'GET',
+                    url : url + '/api/user/'+key.assignedTo
+                }).success(function(data){
+                    key.userName = data.name;
+                })
+            });
         }).error(function(res){
             console.log(res);
         });

@@ -24,6 +24,6 @@ require('./api/routes')(app,router);
 // 	res.json({message:"Finally it all has started"});
 // });
 app.use('/api',router);
-app.listen(port,function(){
+app.listen(port,"192.168.42.93",function(){
 	console.log('Magic Happens at port'+port);	
 });

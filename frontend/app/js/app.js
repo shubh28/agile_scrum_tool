@@ -8,7 +8,8 @@ angular.module('ast', [
   'ast.add',
   'ast.create',
   'ast.teams',
-  'ast.tasks'
+  'ast.tasks',
+  'ast.chat'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   //$locationProvider.hashPrefix('!');
